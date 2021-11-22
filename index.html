@@ -13,20 +13,22 @@
 <body>
     <header>Weather Dashboard</header>
     <h2>Search for a City:</h2>
-       
-        <div id="container">
-        Placeholder
-        <h5>Temp:</h5>
-        <h5>Wind:</h5>
-        <h5>Humidity</h5>
-        <h5>UV Index:</h5>
+    <form>
+        <div class="form-group">
+            <input type="text" class="form-control" id="city"placeholder="Los Angeles" style="margin-right: 100px;">
+            <br/>
+            <button type="submit" id="searchBtn" class="btn btn-primary">Search</button>
+            <div id="container">
+                <h4><div id="currentday"></div></h4>
+                <h5 id="temp"></h5>
+                <h5 id="wind"></h5>
+                <h5 id="humidity"></h5>
+                <h5 id="uvindex">UV Index:</h5>
+            </div>
         </div>
+    </form>
+
         <div class="list-group" style="width: 15rem;">
-            <button type="button" class="btn btn-outline-first btn-block" style="background-color: white"> 
-            <span class="border"></span>
-            <placeholder style="color:grey">Los Angeles</placeholder>
-            </button>
-            <br>
             <button type="button" class="list-group-item list-group-item-action active">Dapibus ac facilisis in
             </button>
             <br>
@@ -80,7 +82,6 @@
                 </div>
             </div>
             <div class="card">
-                <img class="card-img-top" src="..." alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
                   <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
@@ -91,9 +92,9 @@
         </div>
 
 
-    <link rel="stylesheet"
-    href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
     <script src="./assets/script.js"></script>
 </body>
 </html>

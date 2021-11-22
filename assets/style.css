@@ -9,8 +9,16 @@ header {
 h2 {
     font-family: 'Lucida Sans', 'Lucida Grande', Verdana, sans-serif;
     font-size: 25px;
+    margin-left: 1%;
 }
-
+.form-control {
+    width: 20%;
+    margin-left: 1%;
+}
+.btn-primary {
+    margin-left: 1%;
+    width: 20%;
+}
 .list-group {
     margin-left: 20px;
 }
@@ -19,14 +27,12 @@ h2 {
     color: mediumblue;
 }
 #container {
-    border: 5px solid rebeccapurple;
+    border: 2px solid rebeccapurple;
     background-color: white;
-    align-items: center;
-    margin-top: 0%;
-    margin-bottom: 0%;
-    margin-left: 350px;
+    margin-top: 0px;
+    margin-left: 400px;
     width: 800px;
-    height: 250px;
+    height: 280px;
 }
 h5 {
     padding: 10px;
