@@ -17,13 +17,13 @@
         <div class="form-group">
             <input type="text" class="form-control" id="city"placeholder="Los Angeles" style="margin-right: 100px;">
             <br/>
-            <button type="submit" id="searchBtn" class="btn btn-primary">Search</button>
+            <button type="submit" id="searchbutton" class="btn btn-primary">Search</button>
             <div id="container">
-                <h4><div id="currentday"></div></h4>
-                <h5 id="temp"></h5>
-                <h5 id="wind"></h5>
-                <h5 id="humidity"></h5>
-                <h5 id="uvindex">UV Index:</h5>
+                <h4><div id="currentday" id="today"></div></h4>
+                <h5 class="temp"></h5>
+                <h5 class="wind"></h5>
+                <h5 class="humidity"></h5>
+                <h5 id="uvindex"></h5>
             </div>
         </div>
     </form>
@@ -54,10 +54,13 @@
   
         <div class="card-deck">
             <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              <div id="forecast-one">
+                <h5 id="dayone"></h5>
+                <div id="cardscontainer">
+                  <h5 class="temp"></h5>
+                  <h5 class="wind"></h5>
+                  <h5 class="humidity"></h5>
+                </div>
               </div>
             </div>
             <div class="card">
