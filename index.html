@@ -14,84 +14,101 @@
     <header>Weather Dashboard</header>
     <h2>Search for a City:</h2>
     <form>
-        <div class="form-group">
-            <input type="text" class="form-control" id="city"placeholder="Los Angeles" style="margin-right: 100px;">
-            <br/>
-            <button type="submit" id="searchbutton" class="btn btn-primary">Search</button>
-            <div id="container">
+      <div class="container">
+        <h4 id="cityname"></h4> 
+        <h4 class="today"></h4>
+        <h5 class="temp"></h5>
+        <h5 class="wind"></h5>
+        <h5 class="humidity"></h5>
+        <h5 id="uvindex"></h5>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" id="city"placeholder="City name" style="margin-right: 100px;">
+        <br/>
+        <br>
+        <button type="submit" id="searchbutton" class="btn btn-primary">Search</button>
+        <br>
+        <br>
+        <button type="button" class="btn btn-secondary">placeholder</button>
+        <br>
+        <br>
+        <button type="button" class="btn btn-secondary">placeholder</button>
+        <br>
+        <br>
+        <button type="button" class="btn btn-secondary">placeholder</button>
+        <br>
+        <br>
+        <button type="button" class="btn btn-secondary">placeholder</button>
+        <br>
+        <br>
+        <button type="button" class="btn btn-secondary">placeholder</button>
+        <br>
+        <br>
+        <button type="button" class="btn btn-secondary">placeholder</button>
+            <!-- <button type="button" class="btn prev-search" style="width: 20%; height: 20%"></button> -->
+        </div>
+      </form>
+     
+          <!-- <div id="container">
                 <h4><div id="currentday" id="today"><i</div></h4>
                 <h5 class="temp"></h5>
                 <h5 class="wind"></h5>
                 <h5 class="humidity"></h5>
                 <h5 id="uvindex"></h5>
-            </div>
-        </div>
-    </form>
-
-        <div class="list-group" style="width: 15rem;">
-            <button type="button" class="list-group-item list-group-item-action active">Dapibus ac facilisis in
-            </button>
-            <br>
-            <button type="button" class="list-group-item list-group-item-action active">Morbi leo risus
-            </button>
-            <br>
-            <button type="button" class="list-group-item list-group-item-action active">Porta ac consectetur ac
-            </button>
-            <br>
-            <button= type="button" class="list-group-item list-group-item-action active">Vestibulum at eros
-            </button>
-            <button type="button" class="list-group-item list-group-item-action active">Cras justo odio
-            </button>
-            <button type="button" class="list-group-item list-group-item-action active">Dapibus ac facilisis in
-            </button>
-            <button type="button" class="list-group-item list-group-item-action active">Morbi leo risus
-            </button>
-            <button type="button" class="list-group-item list-group-item-action active">Porta ac consectetur ac
-            </button>
-            <button type="button" class="list-group-item list-group-item-action active">Vestibulum at eros
-            </button>
-        </div>
-  
-        <div class="card-deck">
+          </div> -->
+        <section class="cardContainer">
+          <div class="card-deck row" id="weekForecast">
             <div class="card">
-              <div id="forecast-one">
-                <h5 id="dayone"></h5>
-                <div id="cardscontainer">
-                  <h5 class="temp"></h5>
+              <div id="forecast-daytwo" style="font-size: 30px; text-align: left">
+                <div class="cardscontainer">
+                  <h5 class="date"></h5>
+                  <h6 class="temp"></h6>
+                  <h5 class="wind"></h5>
+                  <h5 class="humidity"></h5>
+                </div>
+              </div>
+            </section>
+            <div class="card">
+              <div id="forecast-daythree" style="font-size: 30px; text-align: left">
+                <div class="cardscontainer">
+                  <h5 class="date"></h5>
+                  <h6 class="temp"></h6>
                   <h5 class="wind"></h5>
                   <h5 class="humidity"></h5>
                 </div>
               </div>
             </div>
             <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              <div id="forecast-dayfour" style="font-size: 30px; text-align: left">
+                <div class="cardscontainer">
+                  <h5 class="date"></h5>
+                  <h6 class="temp"></h6>
+                  <h5 class="wind"></h5>
+                  <h5 class="humidity"></h5>
+                </div>
               </div>
             </div>
             <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              <div id="forecast-dayfive" style="font-size: 30px; text-align: left">
+                <div class="cardscontainer">
+                  <h5 class="date"></h5>
+                  <h6 class="temp"></h6>
+                  <h5 class="wind"></h5>
+                  <h5 class="humidity"></h5>
+                </div>
               </div>
             </div>
             <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              <div id="forecast-daysix" style="font-size: 30px; text-align: left">
+                <div class="cardscontainer">
+                  <h5 class="date"></h5>
+                  <h6 class="temp"></h6>
+                  <h5 class="wind"></h5>
+                  <h5 class="humidity"></h5>
                 </div>
+              </div>
             </div>
-            <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                </div>
-            </div>
-
+          </div>
         </div>
 
 

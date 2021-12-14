@@ -16,32 +16,37 @@ h2 {
     margin-left: 1%;
 }
 .btn-primary {
+   /* flex-basis: 100px; */
     margin-left: 1%;
     width: 20%;
 }
-.list-group {
-    margin-left: 20px;
-}
-
+.btn-secondary {
+    margin-left: 1%;
+    width: 20%;
+    text-align: center;
+} 
 .border {
     color: mediumblue;
 }
-#container {
+.container {
+    
     border: 2px solid rebeccapurple;
     background-color: white;
     margin-top: 0px;
     margin-left: 400px;
-    width: 800px;
+    width: 600px;
     height: 280px;
+}
+.element {
+    float: left;
 }
 h5 {
     padding: 10px;
 }
 .card-deck {
     margin-left: 260px;
-    
 }
 .card {
     width: 50rem;
-    margin-top: 10px;
+    margin-top: 0%;
 }
