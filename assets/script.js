@@ -8,6 +8,8 @@ let humidityEl = document.querySelector(".humidity");
 let uvIndexEl   = document.querySelector("#uvindex");
 let weatherCards = document.querySelector(".card-deck");
 
+fetch()
+
 searchBtn.addEventListener("click", function(event) {
     event.preventDefault();
 
@@ -28,11 +30,11 @@ searchBtn.addEventListener("click", function(event) {
 function getCurrentWeather(value) {
     console.log("cityInput value inside getcurrentweather", value)
     console.log(value);
-    
-    let weatherUrl = "https://api.openweathermap.org/data/2.5/forecast?q=" + value + "&cnt=1" + "&appid=78e465147d98ed2de5b5d10f98a4ff8f&units=imperial";
-    console.log(weatherUrl)
+  
+    let weatherURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + value + "&cnt=1" + "&appid=78e465147d98ed2de5b5d10f98a4ff8f&units=imperial";
+    console.log(weatherURL)
 
-    fetch(weatherUrl) 
+    fetch(weatherURL) 
         .then(function (response) {
             return response.json();
         })
@@ -43,11 +45,37 @@ function getCurrentWeather(value) {
             tempEl.textContent = "Temp: " +weather.list[0].main.temp + " F";
             windEl.textContent = "Wind Speed: " + weather.list[0].wind.speed + " MPH";
             humidityEl.textContent = "Humidity: " + weather.list[0].main.humidity + "%";
-
+            
             console.log("GET CURRENT WEATHER",weather);
             console.log(weather.city.coord);
         })
 }
+
+
+
+function weekForecast () {
+    for (let i = 0; i < weatherWeek.length; i++) {
+            
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function getUVIndex(weather) {
     let oneCallURL = "https://api.openweathermap.org/data/2.5/onecall?lat=33.44&lon=-94.04&exclude=hourly,daily&appid=78e465147d98ed2de5b5d10f98a4ff8f&units=imperial"
