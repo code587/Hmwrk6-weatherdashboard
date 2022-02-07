@@ -44,6 +44,14 @@ h2 {
 h5 {
     padding: 10px;
 }
+.list-group {
+    margin-bottom: 300px;
+}
+.list-group-item {
+    margin-left: 15px;
+    width: 250px;
+   
+}
 .card-deck {
     margin-left: 260px;
 }
