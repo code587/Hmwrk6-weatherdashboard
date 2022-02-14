@@ -13,7 +13,13 @@
 <body>
     <header>Weather Dashboard</header>
     <h2>Search for a City:</h2>
-    <form>
+    <section>
+      <div class="buttonControl">
+        <input type="text" class="boxControl" placeholder="City name" style="margin-right: 1px;">
+        <br/>
+        <br>
+        <button type="submit" id="searchbutton" class="btn btn-primary">Search</button>
+      </div>
       <div class="container">
         <h4 class="cityname"></h4> 
         <h4 class="today"></h4>
@@ -22,31 +28,51 @@
         <h5 class="humidity"></h5>
         <h5 id="uvindex"></h5>
       </div>
-      <div class="form-group">
-        <input type="text" class="form-control" id="city"placeholder="City name" style="margin-right: 100px;">
-        <br/>
+    </section>
         <br>
-        <button type="submit" id="searchbutton" class="btn btn-primary">Search</button>
-        <br>
-        <ul class="list-group">
+        <ul class="listGroup">
           <br></br>
           <li class="list-group-item">An item</li>
+          <br>
           <li class="list-group-item">A second item</li>
+          <br>
           <li class="list-group-item">A third item</li>
+          <br>
           <li class="list-group-item">A fourth item</li>
+          <br>
           <li class="list-group-item">And a fifth one</li>
         </ul>
         <br>
+
+    <section class="row"> 
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card">
+          <div class="card text-dark bg-light mb-3" style="max-width: 18rem;">
+            <div class="card-header">Header</div>
+              <div class="card-body">
+                <h4 class="date"></h4>
+                <h5 class="temp2"></h5>
+                <h5 class="wind2"></h5>
+                <h5 class="humidity2"></h5>
+              </div>
+          </div>
         </div>
-      </form>
-     
-      <form>
-        <div class="cardContainer">
-          <div class="card-deck row" id="weekForecast">
-            <div class="card">
-              <div id="forecast-daytwo" style="font-size: 30px; text-align: left">
+      </div>
+      <div class="card">
+        <div class="card text-dark bg-light mb-3" style="max-width: 18rem;">
+          <div class="card-header">Header</div>
+            <div class="card-body">
+            <h4 class="date3"></h4>
+            <h5 class="temp3"></h5>
+            <h5 class="wind3"></h5>
+            <h5 class="humidity3"></h5>
+          </div>
+        </div>
+    </section>
+            <!-- <div class="card">
+              <div id="forecast-dayfour" style="font-size: 30px; text-align: left">
                 <div class="cardscontainer">
-                  <h5 class="today"></h5>
+                  <h5 class="cityname"></h5>
                   <h6 class="temp"></h6>
                   <h5 class="wind"></h5>
                   <h5 class="humidity"></h5>
@@ -54,48 +80,28 @@
               </div>
             </div>
             <div class="card">
-              <div id="forecast-daythree" style="font-size: 30px; text-align: left">
-                <div class="cardscontainer">
-                  <h5 class="date"></h5>
-                  <h6 class="temp2"></h6>
-                  <h5 class="wind2"></h5>
-                  <h5 class="humidity2"></h5>
-                </div>
-              </div>
-            </div>
-            <div class="card">
-              <div id="forecast-dayfour" style="font-size: 30px; text-align: left">
-                <div class="cardscontainer">
-                  <h5 class="date"></h5>
-                  <h6 class="temp2"></h6>
-                  <h5 class="wind2"></h5>
-                  <h5 class="humidity2"></h5>
-                </div>
-              </div>
-            </div>
-            <div class="card">
               <div id="forecast-dayfive" style="font-size: 30px; text-align: left">
                 <div class="cardscontainer">
-                  <h5 class="date"></h5>
-                  <h6 class="temp2"></h6>
-                  <h5 class="wind2"></h5>
-                  <h5 class="humidity2"></h5>
+                  <h5 class="cityname"></h5>
+                  <h6 class="temp"></h6>
+                  <h5 class="wind"></h5>
+                  <h5 class="humidity"></h5>
                 </div>
               </div>
             </div>
             <div class="card">
               <div id="forecast-daysix" style="font-size: 30px; text-align: left">
                 <div class="cardscontainer">
-                  <h5 class="date"></h5>
-                  <h6 class="temp2"></h6>
-                  <h5 class="wind2"></h5>
-                  <h5 class="humidity2"></h5>
+                  <h5 class="cityname"></h5>
+                  <h6 class="temp"></h6>
+                  <h5 class="wind"></h5>
+                  <h5 class="humidity"></h5>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </form>
+        </div> -->
+    
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
