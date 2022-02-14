@@ -27,9 +27,9 @@ h2 {
     width: 20%;
     text-align: center;
 } 
-.border {
+/* .border {
     color: mediumblue;
-}
+} */
 .container {
     border: 2px solid rebeccapurple;
     background-color: white;
@@ -53,12 +53,4 @@ h5 {
     width: 265px;
     height: 50px
    
-}
-.card-deck {
-    margin-left: 260px;
-}
-.card {
-    width: 50rem;
-    margin-top: 0%;
-    height: 250px;
 }

@@ -15,6 +15,18 @@ let todayEl3 = document.querySelector(".date3");
 let tempEl3 = document.querySelector(".temp3");
 let windEl3 = document.querySelector(".wind3");
 let humidityEl3 = document.querySelector(".humidity3");
+let todayEl4 = document.querySelector(".date4");
+let tempEl4 = document.querySelector(".temp4");
+let windEl4 = document.querySelector(".wind4");
+let humidityEl4 = document.querySelector(".humidity4");
+let todayEl5 = document.querySelector(".date5");
+let tempEl5 = document.querySelector(".temp5");
+let windEl5 = document.querySelector(".wind5");
+let humidityEl5 = document.querySelector(".humidity5");
+let todayEl6 = document.querySelector(".date6");
+let tempEl6 = document.querySelector(".temp6");
+let windEl6 = document.querySelector(".wind6");
+let humidityEl6 = document.querySelector(".humidity6");
 
 //fetch()
 
@@ -23,16 +35,16 @@ searchBtn.addEventListener("click", function(event) {
 
     let citySearch = cityInput.value
     console.log(citySearch)
-})
-//     getLatestTemp(citySearch)
-    
-// })
 
-// function getLatestTemp(value) {
-//     console.log("cityInput value inside getLatestTemp", value)
-//     console.log(value);
+    getCurrentWeather(citySearch)
     
-    let weatherURL = "https://api.openweathermap.org/data/2.5/forecast?q=Charlotte&appid=78e465147d98ed2de5b5d10f98a4ff8f&units=imperial";
+})
+
+function getCurrentWeather(value) {
+    console.log("cityInput value inside getCurrentWeather", value)
+    console.log(value);
+    
+    let weatherURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + value + "&exclude=hourly" + "&appid=78e465147d98ed2de5b5d10f98a4ff8f&units=imperial";
     
     fetch(weatherURL) 
     .then(function (response) {
@@ -40,24 +52,41 @@ searchBtn.addEventListener("click", function(event) {
     })
     .then(function (weather) {
         console.log(weather);
+
+        
         cityNameEl.textContent = weather.city.name;
         todayEl.textContent = weather.list[0].dt_txt; 
         tempEl.textContent = "Temp: " + weather.list[0].main.temp + " F";
         windEl.textContent = "Wind Speed: " + weather.list[0].wind.speed + " MPH";
         humidityEl.textContent = "Humidity: " + weather.list[0].main.humidity + "%";
 
-        todayEl2.textContent = weather.list[7].dt_txt; 
-        tempEl2.textContent = "Temp: " + weather.list[7].main.temp + " F";
-        windEl2.textContent = "Wind Speed: " + weather.list[7].wind.speed + " MPH";
-        humidityEl2.textContent = "Humidity: " + weather.list[7].main.humidity + "%";
+        todayEl2.textContent = weather.list[5].dt_txt; 
+        tempEl2.textContent = "Temp: " + weather.list[5].main.temp + " F";
+        windEl2.textContent = "Wind Speed: " + weather.list[5].wind.speed + " MPH";
+        humidityEl2.textContent = "Humidity: " + weather.list[5].main.humidity + "%";
 
-        todayEl3.textContent = weather.list[14].dt_txt; 
-        tempEl3.textContent = "Temp: " + weather.list[14].main.temp + " F";
-        windEl3.textContent = "Wind Speed: " + weather.list[14].wind.speed + " MPH";
-        humidityEl3.textContent = "Humidity: " + weather.list[14].main.humidity + "%";
+        todayEl3.textContent = weather.list[13].dt_txt; 
+        tempEl3.textContent = "Temp: " + weather.list[13].main.temp + " F";
+        windEl3.textContent = "Wind Speed: " + weather.list[13].wind.speed + " MPH";
+        humidityEl3.textContent = "Humidity: " + weather.list[13].main.humidity + "%";
 
-       
+        todayEl4.textContent = weather.list[21].dt_txt; 
+        tempEl4.textContent = "Temp: " + weather.list[21].main.temp + " F";
+        windEl4.textContent = "Wind Speed: " + weather.list[21].wind.speed + " MPH";
+        humidityEl4.textContent = "Humidity: " + weather.list[21].main.humidity + "%";
 
+        todayEl5.textContent = weather.list[29].dt_txt; 
+        tempEl5.textContent = "Temp: " + weather.list[29].main.temp + " F";
+        windEl5.textContent = "Wind Speed: " + weather.list[29].wind.speed + " MPH";
+        humidityEl5.textContent = "Humidity: " + weather.list[29].main.humidity + "%";
+
+        todayEl6.textContent = weather.list[37].dt_txt; 
+        tempEl6.textContent = "Temp: " + weather.list[37].main.temp + " F";
+        windEl6.textContent = "Wind Speed: " + weather.list[37].wind.speed + " MPH";
+        humidityEl6.textContent = "Humidity: " + weather.list[37].main.humidity + "%";
+
+    })
+}
 
         
 
@@ -71,8 +100,7 @@ searchBtn.addEventListener("click", function(event) {
         // })
         // .then(function (weather) {
         //     console.log(weather);
-    })
-     
+    
 
     // .then(function (response) {
         //     return response.json();

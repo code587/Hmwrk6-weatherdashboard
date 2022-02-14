@@ -11,11 +11,12 @@
     <link rel="stylesheet" href="./assets/style.css"/>
 </head>
 <body>
-    <header>Weather Dashboard</header>
-    <h2>Search for a City:</h2>
-    <section>
+  <header>Weather Dashboard</header>
+  <h2>Search for a City:</h2>
+  <section>
+    <div>
       <div class="buttonControl">
-        <input type="text" class="boxControl" placeholder="City name" style="margin-right: 1px;">
+        <input type="text" class="boxControl" id="city" placeholder="City name" style="margin-right: 1px;">
         <br/>
         <br>
         <button type="submit" id="searchbutton" class="btn btn-primary">Search</button>
@@ -28,7 +29,8 @@
         <h5 class="humidity"></h5>
         <h5 id="uvindex"></h5>
       </div>
-    </section>
+    </div>
+  </section>
         <br>
         <ul class="listGroup">
           <br></br>
@@ -44,63 +46,75 @@
         </ul>
         <br>
 
-    <section class="row"> 
-      <div class="col-12 col-md-6 col-lg-3">
-        <div class="card">
-          <div class="card text-dark bg-light mb-3" style="max-width: 18rem;">
-            <div class="card-header">Header</div>
-              <div class="card-body">
-                <h4 class="date"></h4>
-                <h5 class="temp2"></h5>
-                <h5 class="wind2"></h5>
-                <h5 class="humidity2"></h5>
-              </div>
-          </div>
-        </div>
-      </div>
-      <div class="card">
+  <section class="row"> 
+    
+    <div class="col-12 col-md-6 col-lg-3">
+      <!-- <div class="card"> -->
         <div class="card text-dark bg-light mb-3" style="max-width: 18rem;">
           <div class="card-header">Header</div>
             <div class="card-body">
-            <h4 class="date3"></h4>
-            <h5 class="temp3"></h5>
-            <h5 class="wind3"></h5>
-            <h5 class="humidity3"></h5>
-          </div>
+              <h4 class="date"></h4>
+              <h5 class="temp2"></h5>
+              <h5 class="wind2"></h5>
+              <h5 class="humidity2"></h5>
+            </div>
         </div>
-    </section>
-            <!-- <div class="card">
-              <div id="forecast-dayfour" style="font-size: 30px; text-align: left">
-                <div class="cardscontainer">
-                  <h5 class="cityname"></h5>
-                  <h6 class="temp"></h6>
-                  <h5 class="wind"></h5>
-                  <h5 class="humidity"></h5>
-                </div>
-              </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-3">
+      <!-- <div class="card"> -->
+        <div class="card text-dark bg-light mb-3" style="max-width: 18rem;">
+          <div class="card-header">Header</div>
+            <div class="card-body">
+              <h4 class="date3"></h4>
+              <h5 class="temp3"></h5>
+              <h5 class="wind3"></h5>
+              <h5 class="humidity3"></h5>
             </div>
-            <div class="card">
-              <div id="forecast-dayfive" style="font-size: 30px; text-align: left">
-                <div class="cardscontainer">
-                  <h5 class="cityname"></h5>
-                  <h6 class="temp"></h6>
-                  <h5 class="wind"></h5>
-                  <h5 class="humidity"></h5>
-                </div>
-              </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-3">
+      <!-- <div class="card"> -->
+        <div class="card text-dark bg-light mb-3" style="max-width: 18rem;">
+          <div class="card-header">Header</div>
+            <div class="card-body">
+              <h4 class="date4"></h4>
+              <h5 class="temp4"></h5>
+              <h5 class="wind4"></h5>
+              <h5 class="humidity4"></h5>
             </div>
-            <div class="card">
-              <div id="forecast-daysix" style="font-size: 30px; text-align: left">
-                <div class="cardscontainer">
-                  <h5 class="cityname"></h5>
-                  <h6 class="temp"></h6>
-                  <h5 class="wind"></h5>
-                  <h5 class="humidity"></h5>
-                </div>
-              </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-3">
+      <!-- <div class="card"> -->
+        <div class="card text-dark bg-light mb-3" style="max-width: 18rem;">
+          <div class="card-header">Header</div>
+            <div class="card-body">
+              <h4 class="date5"></h4>
+              <h5 class="temp5"></h5>
+              <h5 class="wind5"></h5>
+              <h5 class="humidity5"></h5>
             </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="col-12 col-md-6 col-lg-3">
+    <!-- <div class="card"> -->
+      <div class="card text-dark bg-light mb-3" style="max-width: 18rem;">
+        <div class="card-header">Header</div>
+          <div class="card-body">
+            <h4 class="date6"></h4>
+            <h5 class="temp6"></h5>
+            <h5 class="wind6"></h5>
+            <h5 class="humidity6"></h5>
           </div>
-        </div> -->
+      </div>
+    </div>
+  </div>
+</section>
     
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
