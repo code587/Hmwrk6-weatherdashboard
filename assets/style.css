@@ -13,30 +13,31 @@ h2 {
 }
 .boxControl {
     width: 20%;
-    margin-inline-start: 1%;
-    justify-self: flex-start;
+    margin-left: -50px;
+    
     margin-top: 0%;
 }
+.card-body {
+    padding-left: 0%;
+}
 .btn-primary {
-   /* flex-basis: 100px; */
-    margin-left: 1%;
+    margin-left: -50px;
     width: 20%;
 }
 .btn-secondary {
-    margin-left: 1%;
+    margin-left: -50px;
     width: 20%;
-    text-align: center;
 } 
-/* .border {
-    color: mediumblue;
-} */
-.container {
+.colcontainer {
     border: 2px solid rebeccapurple;
-    background-color: white;
-    margin-top: -100px;
-    margin-left: 600px;
+    background-color: lavenderblush;
+    margin-top: -300px;
+    margin-left: 300px;
     width: 600px;
     height: 280px;
+}
+.row {
+    margin-top: 80px;
 }
 .element {
     float: left;

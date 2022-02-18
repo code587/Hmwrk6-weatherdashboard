@@ -1,12 +1,12 @@
 let cityInput = document.querySelector("#city");
 let searchBtn = document.querySelector("#searchbutton");
+let prevCities = document.querySelector("#previousCities");
 let cityNameEl = document.querySelector(".cityname");
 let todayEl = document.querySelector(".today");
 let tempEl = document.querySelector(".temp");
 let windEl = document.querySelector(".wind");
 let humidityEl = document.querySelector(".humidity");
 // let uvIndexEl   = document.querySelector("#uvindex");
-// let weatherCards = document.querySelector(".card-deck");
 let todayEl2 = document.querySelector(".date");
 let tempEl2 = document.querySelector(".temp2");
 let windEl2 = document.querySelector(".wind2");
@@ -28,66 +28,75 @@ let tempEl6 = document.querySelector(".temp6");
 let windEl6 = document.querySelector(".wind6");
 let humidityEl6 = document.querySelector(".humidity6");
 
-//fetch()
+priorSearch();
 
-searchBtn.addEventListener("click", function(event) {
-    event.preventDefault();
-
-    let citySearch = cityInput.value
-    console.log(citySearch)
-
-    getCurrentWeather(citySearch)
+function priorSearch() {
     
-})
-
-function getCurrentWeather(value) {
-    console.log("cityInput value inside getCurrentWeather", value)
-    console.log(value);
+    prevCities.textContent = localStorage.getItem("citySearch");
     
-    let weatherURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + value + "&exclude=hourly" + "&appid=78e465147d98ed2de5b5d10f98a4ff8f&units=imperial";
-    
-    fetch(weatherURL) 
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (weather) {
-        console.log(weather);
-
-        
-        cityNameEl.textContent = weather.city.name;
-        todayEl.textContent = weather.list[0].dt_txt; 
-        tempEl.textContent = "Temp: " + weather.list[0].main.temp + " F";
-        windEl.textContent = "Wind Speed: " + weather.list[0].wind.speed + " MPH";
-        humidityEl.textContent = "Humidity: " + weather.list[0].main.humidity + "%";
-
-        todayEl2.textContent = weather.list[5].dt_txt; 
-        tempEl2.textContent = "Temp: " + weather.list[5].main.temp + " F";
-        windEl2.textContent = "Wind Speed: " + weather.list[5].wind.speed + " MPH";
-        humidityEl2.textContent = "Humidity: " + weather.list[5].main.humidity + "%";
-
-        todayEl3.textContent = weather.list[13].dt_txt; 
-        tempEl3.textContent = "Temp: " + weather.list[13].main.temp + " F";
-        windEl3.textContent = "Wind Speed: " + weather.list[13].wind.speed + " MPH";
-        humidityEl3.textContent = "Humidity: " + weather.list[13].main.humidity + "%";
-
-        todayEl4.textContent = weather.list[21].dt_txt; 
-        tempEl4.textContent = "Temp: " + weather.list[21].main.temp + " F";
-        windEl4.textContent = "Wind Speed: " + weather.list[21].wind.speed + " MPH";
-        humidityEl4.textContent = "Humidity: " + weather.list[21].main.humidity + "%";
-
-        todayEl5.textContent = weather.list[29].dt_txt; 
-        tempEl5.textContent = "Temp: " + weather.list[29].main.temp + " F";
-        windEl5.textContent = "Wind Speed: " + weather.list[29].wind.speed + " MPH";
-        humidityEl5.textContent = "Humidity: " + weather.list[29].main.humidity + "%";
-
-        todayEl6.textContent = weather.list[37].dt_txt; 
-        tempEl6.textContent = "Temp: " + weather.list[37].main.temp + " F";
-        windEl6.textContent = "Wind Speed: " + weather.list[37].wind.speed + " MPH";
-        humidityEl6.textContent = "Humidity: " + weather.list[37].main.humidity + "%";
-
-    })
 }
-
+    
+    function getCurrentWeather(value) {
+        console.log("cityInput value inside getCurrentWeather", value)
+        console.log(value);
+        
+        let weatherURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + value + "&exclude=hourly" + "&appid=78e465147d98ed2de5b5d10f98a4ff8f&units=imperial";
+        
+        fetch(weatherURL) 
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (weather) {
+            console.log(weather);
+            
+            
+            cityNameEl.textContent = weather.city.name;
+            todayEl.textContent = weather.list[0].dt_txt; 
+            tempEl.textContent = "Temp: " + weather.list[0].main.temp + " F";
+            windEl.textContent = "Wind Speed: " + weather.list[0].wind.speed + " MPH";
+            humidityEl.textContent = "Humidity: " + weather.list[0].main.humidity + "%";
+            
+            todayEl2.textContent = weather.list[5].dt_txt; 
+            tempEl2.textContent = "Temp: " + weather.list[5].main.temp + " F";
+            windEl2.textContent = "Wind Speed: " + weather.list[5].wind.speed + " MPH";
+            humidityEl2.textContent = "Humidity: " + weather.list[5].main.humidity + "%";
+            
+            todayEl3.textContent = weather.list[13].dt_txt; 
+            tempEl3.textContent = "Temp: " + weather.list[13].main.temp + " F";
+            windEl3.textContent = "Wind Speed: " + weather.list[13].wind.speed + " MPH";
+            humidityEl3.textContent = "Humidity: " + weather.list[13].main.humidity + "%";
+            
+            todayEl4.textContent = weather.list[21].dt_txt; 
+            tempEl4.textContent = "Temp: " + weather.list[21].main.temp + " F";
+            windEl4.textContent = "Wind Speed: " + weather.list[21].wind.speed + " MPH";
+            humidityEl4.textContent = "Humidity: " + weather.list[21].main.humidity + "%";
+            
+            todayEl5.textContent = weather.list[29].dt_txt; 
+            tempEl5.textContent = "Temp: " + weather.list[29].main.temp + " F";
+            windEl5.textContent = "Wind Speed: " + weather.list[29].wind.speed + " MPH";
+            humidityEl5.textContent = "Humidity: " + weather.list[29].main.humidity + "%";
+            
+            todayEl6.textContent = weather.list[37].dt_txt; 
+            tempEl6.textContent = "Temp: " + weather.list[37].main.temp + " F";
+            windEl6.textContent = "Wind Speed: " + weather.list[37].wind.speed + " MPH";
+            humidityEl6.textContent = "Humidity: " + weather.list[37].main.humidity + "%";
+            
+        })
+    }
+    
+    searchBtn.addEventListener("click", function(event) {
+        event.preventDefault();
+        
+        let citySearch = cityInput.value
+        console.log(citySearch)
+        
+        getCurrentWeather(citySearch)
+        
+        localStorage.setItem("citySearch", citySearch)
+        prevCities.textContent = citySearch;
+        li.appendChild(prevCities)
+        
+    })
         
 
 
