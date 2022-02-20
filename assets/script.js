@@ -37,9 +37,7 @@ function priorSearch() {
     
     function getExistingWeather(value) {
         console.log("cityInput value inside getExistingWeather", value)
-        console.log(value);
-
-        
+        console.log(value);   
         
         fetch("https://api.openweathermap.org/data/2.5/forecast?q=" + value + "&exclude=hourly" + "&appid=78e465147d98ed2de5b5d10f98a4ff8f&units=imperial") 
         .then(function (response) {
@@ -79,9 +77,9 @@ function priorSearch() {
 
 
                 
-                cityNameEl.textContent = climate.city.name;
-                todayEl.textContent = currentDate; 
-                tempEl.textContent = "Temp: " + climate.list[0].main.temp + " F";
+            cityNameEl.textContent = climate.city.name;
+            todayEl.textContent = currentDate; 
+            tempEl.textContent = "Temp: " + climate.list[0].main.temp + " F";
             windEl.textContent = "Wind: " + climate.list[0].wind.speed + " MPH";
             humidityEl.textContent = "Humidity: " + climate.list[0].main.humidity + "%";
             
