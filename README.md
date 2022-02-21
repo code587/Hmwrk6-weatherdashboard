@@ -11,6 +11,7 @@ Utilized openweathermap API to retrieve the weather data.  The dashboard include
 ## Installation
 Clone the github url in your code editor.  Once done go to the index.html, right click on mouse and choose open live server.  Type the name of the city you wish to have information on in the textarea that says City Name and click on the Search button.
 
+
 ## Contact
 You may reach the author at the below contact information.
 

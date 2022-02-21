@@ -44,8 +44,8 @@ h2 {
 } 
 .colcontainer {
     border: 5px solid rgb(128,0,128);;
-    background-color: rgb(0,0,87);
-    color: ghostwhite ;
+    background-color: white;
+    /* color: ghostwhite ; */
     margin-top: -300px;
     margin-left: 180px;
     width: 990px;
