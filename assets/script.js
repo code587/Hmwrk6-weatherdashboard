@@ -1,4 +1,4 @@
-//Not the prettiest code but it is functional. Only stores one city in local storage.
+//Not the prettiest code but it is functional. Only stores one city in local storage. The UVindex is not in box that changes colors.
 
 //global variables to be used for the current and five day forecast data
 let cityInput = document.querySelector("#city");
@@ -89,12 +89,6 @@ function getExistingWeather(value) {
         let uvInfoEl = document.querySelector(".uvInfo");
                 
         uvInfoEl.textContent = "UV Index: " + uvResult
-            if (uvResult <= 2) {
-                $('#color').css({'color': 'green'});
-                }else if(uvResult >=3 && uvResult <=5) {
-                    $('#color').css({'color': 'yellow'});
-                }
-                ;
  
         //using moment to format the current date
         let currentDate = moment().format("MM/DD/YYYY")
