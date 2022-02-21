@@ -1,3 +1,4 @@
+//global variables to be used for the current and five day forecast data
 let cityInput = document.querySelector("#city");
 let searchBtn = document.querySelector("#searchbutton");
 let prevCities = document.querySelector(".previousCities");
@@ -28,35 +29,42 @@ let windEl6 = document.querySelector(".wind6");
 let humidityEl6 = document.querySelector(".humidity6");
 
 priorSearch();
-
+// function to get using json.parse so data becomes an object again
 function priorSearch() {
     
     prevCities.textContent = JSON.parse(localStorage.getItem("citySearch")) || [];
 
+    let citySearch = [];
+
 }
-    
+    //function to get the current weather information. assigned cityInput global variable.
     function getExistingWeather(value) {
         console.log("cityInput value inside getExistingWeather", value)
         console.log(value);   
         
+        //fetching api for the current weather information using value from function to choose city
         fetch("https://api.openweathermap.org/data/2.5/forecast?q=" + value + "&exclude=hourly" + "&appid=78e465147d98ed2de5b5d10f98a4ff8f&units=imperial") 
+        //returning promise and headers and body will be converted to json
         .then(function (response) {
             return response.json();
         })
+        
         .then(function (climate) {
             console.log(climate);
-            //console.log(climate.list[0].weather[0].icon);
-            
+     
+            //retrieving latitude and longitude from api for access to the uv index
             let lat = climate.city.coord.lat
             console.log(lat);
             let lon = climate.city.coord.lon
             console.log(lon);
-            //let imageEl = document.createElement("img")
+
+            //retrieving weather icon information for current weather using icon url
             let iconEl = document.querySelector("#climateIcon");
             let iconImage = climate.list[0].weather[0].icon
             console.log(iconImage);
             iconEl.src="http://openweathermap.org/img/wn/" + iconImage + ".png";
 
+            //fetching one call url where uv index is located
             fetch("https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon +"&exclude={part}&appid=78e465147d98ed2de5b5d10f98a4ff8f&units=imperial")
             .then(function (response) {
                 return response.json();
@@ -64,19 +72,18 @@ function priorSearch() {
             .then(function (oneCallindex) {
                 //console.log(oneCallindex.current.uvi);    
                 
+                //defining result for uv index and adding to the card for current weather
                 let uvResult = oneCallindex.current.uvi
                 console.log(uvResult);
                 
                 let uvInfoEl = document.querySelector(".uvInfo");
                 uvInfoEl.textContent = "UV Index: " + uvResult;
                 
+                //using moment format for current date
                 let currentDate = moment().format("MM/DD/YYYY")
                 console.log(currentDate);
-                
-
-
-
-                
+    
+            //rendering current weather data and five day forecast data to container and cards using assigned global variables
             cityNameEl.textContent = climate.city.name;
             todayEl.textContent = currentDate; 
             tempEl.textContent = "Temp: " + climate.list[0].main.temp + " F";
@@ -110,6 +117,7 @@ function priorSearch() {
         })
     })
 }
+    //on click for search button when city name input in the placeholder buttton
     searchBtn.addEventListener("click", function(event) {
         event.preventDefault();
         
@@ -118,9 +126,10 @@ function priorSearch() {
         
         getExistingWeather(citySearch)
        
-        localStorage.setItem("city", JSON.stringify(citySearch))
+        //storing previous city searches in local storage using stringify so data can be stored as string and appending to li element.  
+        localStorage.setItem("city", JSON.stringify(citySearch));
         prevCities.textContent = citySearch;
-        li.appendChild("<button class='btn btn-dark prevCities'>"+ city + "</button>")
+        li.appendChild(citySearch)
         
     })
 
