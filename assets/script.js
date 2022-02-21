@@ -99,8 +99,6 @@ function getExistingWeather(value) {
         //using moment to format the current date
         let currentDate = moment().format("MM/DD/YYYY")
             console.log(currentDate);
-
-        
     
         //rendering current weather data and five day forecast data to container and cards using assigned global variables
         cityNameEl.textContent = climate.city.name;
